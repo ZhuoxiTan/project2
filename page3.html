@@ -12,26 +12,33 @@
         <p>Select the supplies you wish to take on your quest. Choose wisely, as you can only carry a limited amount.</p>
         
         <form id="characterForm" type="get" action="page4.html">
-            <input type="checkbox" id="food" name="supply" value="food">
-            <label for="food">Food: Essential for energy.</label><br>
+            <fieldset class="characterSupply">
+                <input type="checkbox" id="food" name="supply" value="food">
+                <label for="food">Food: Essential for energy.</label>
+            </fieldset>
             
-            <input type="checkbox" id="Water" name="supply" value="Water">
-            <label for="Water">Water: Hydration is key!</label><br>
+            <fieldset class="characterSupply">
+                <input type="checkbox" id="Water" name="supply" value="Water">
+                <label for="Water">Water: Hydration is key!</label>
+            </fieldset>
 
-            <input type="checkbox" id="MagicPotions" name="supply" value="MagicPotions">
-            <label for="MagicPotions">Magic Potions: For health and magical energy.</label><br>
+            <fieldset class="characterSupply">
+                <input type="checkbox" id="MagicPotions" name="supply" value="MagicPotions">
+                <label for="MagicPotions">Magic Potions: For health and magical energy.</label>
+            </fieldset>
 
-            <input type="checkbox" id="Maps" name="supply" value="Maps">
-            <label for="Maps">Maps: Don't get lost in the wilderness!</label><br>
+            <fieldset class="characterSupply">
+                <input type="checkbox" id="Maps" name="supply" value="Maps">
+                <label for="Maps">Maps: Don't get lost in the wilderness!</label>
+            </fieldset>
 
-            <input type="checkbox" id="Sword" name="supply" value="Sword">
-            <label for="Sword">Sword: Fend off those pesky foes!</label><br>
+            <fieldset class="characterSupply">
+                <input type="checkbox" id="Sword" name="supply" value="Sword">
+                <label for="Sword">Sword: Fend off those pesky foes!</label>
+            </fieldset>
 
-            <input type="submit" value="Continue">
-
+            <input type="submit" value="Continue" class="continue-btn">
         </form>
-
-
     </section>
 </body>
 </html>

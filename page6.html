@@ -14,13 +14,12 @@
         <form id="finalShow" type="get" action="page7.html">
             <fieldset>
                 <legend>How will you confront Malakar</legend>
-                <select id="pathChoice" name="pathChoice" >
+                <p>Choose wisely:</p>
+                <select id="pathChoice" name="pathChoice" required>
                     <option text="" value="">--Please choose an option--</option>
                     <option text="Path of Warrior" value="warrior">Path of Warrior</option>
                     <option text="Path of Stealth" value="stealth">Path of Stealth</option>
                 </select>
-    
-                <button id="submit">Continue on Your Journey</button>
             </fieldset>
 
             <fieldset>
@@ -28,12 +27,12 @@
                 <fieldset>
                     <legend>The Brave</legend>
                     <label>Your Name</label>
-                    <input type="text" id="theBrave" name="theBrave">
+                    <input type="text" id="theBrave" name="theBrave" required>
                 </fieldset>
 
                 <fieldset>
                     <legend>Select Your Weapon</legend>
-                    <input type="radio" id="sword" name="weapon" value="sword">
+                    <input type="radio" id="sword" name="weapon" value="sword" required>
                     <label for="sword">Sword</label>
 
                     <input type="radio" id="bow" name="weapon" value="bow">
@@ -55,11 +54,12 @@
                     <label for="cloak">Cloak</label>
                 </fieldset>
 
-                <label>Leave a Message for Malakar</label>
-                <input type="text" id="message" name="message">
+                <label for="message">Leave a Message for Malakar</label>
+                <textarea id="message" name="message" rows="5" cols="60" placeholder="" required></textarea>
             </fieldset>
+            <button id="submit">Face Malakar</button>
         </form>
-        <button id="submit">Face Malakar</button>
+        
         <p>Your choice here will determine the fate of the kingdom. Choose wisely.</p>
     </section>
 </body>

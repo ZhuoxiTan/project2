@@ -26,17 +26,36 @@
         const userOptions = [];
 
         function addUser(action){
+            userOptions.push(action);
+
 
         }
 
-        options.addEventListener("click", ()=>{
+        userOptions.addEventListener("click", ()=>{
             this.style.backgroundColor = "blue";
+            addUser(this.textContent);
+
         });
 
         function checkSequence(correctSequence, yourSequence){
-            const arr = [];
+            if(correctSequence.length !== yourSequence.length){
+                alert("Incorrect sequence. Try again!");
+                reset();
+                return;
+            }
             for(let i = 0; i < correctSequence.length; i++){
-                arr[i] = 
+                if(correctSequence[i] !== yourSequence[i]){
+                    alert("Incorrect sequence. Try again!");
+                    reset();
+                    return;
+                }
+            }
+        }
+
+        function reset(){
+            userOptions = [];
+            for(let i = 0; i < options.length; i++){
+                options[i].style.backgroundColor = "white";
             }
         }
     </script>

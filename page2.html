@@ -8,21 +8,26 @@
 </head>
 <body>
     <section class="container">
-        <h1>Character Selection</h1>
+        <h1>Choose Your Character</h1>
         <form id="characterForm" type="get" action="page3.html">
             <fieldset>
                 <legend>Choose Your Character</legend>
-                <input type="radio" id="characterOne" name="character" value="Aria">
-                <label for="Aria">Aria, the Warrior</label><br>
+                <fieldset class="characterOption">
+                    <input type="radio" id="characterOne" name="character" value="Aria" required>
+                    <label for="Aria"><strong>Aria, the Warrior:</strong> Strong and brave, with the ability to overcome physical obstacles.</label>
+                </fieldset>
+                
+                <fieldset class="characterOption">
+                    <input type="radio" id="characterTwo" name="character" value="Eldrin">
+                    <label for="Eldrin"><strong>Eldrin, the Mage:</strong> Wise and knowledgeable, with the power to solve puzzles and cast spells.</label>
+                </fieldset>
 
-                <input type="radio" id="characterTwo" name="character" value="Eldrin">
-                <label for="Eldrin">Eldrin, the Mage</label>
-
-                <input type="radio" id="characterThree" name="character" value="Tara">
-                <label for="Tara">Tara, the Rogue</label>
-
-                <input type="submit" value="Continue">
+                <fieldset class="characterOption">
+                    <input type="radio" id="characterThree" name="character" value="Tara">
+                    <label for="Tara"><strong>Tara, the Rogue:</strong> Quick and cunning, with skills in stealth and persuasion.</label>
+                </fieldset>
             </fieldset>
+            <input type="submit" value="Continue" id="submit">
         </form>
     </section>
 </body>

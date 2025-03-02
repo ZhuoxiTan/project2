@@ -11,11 +11,12 @@
         <h1>The Journey Continues</h1>
         <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
         <form id="journey" type="get" action="page6.html">
-            <lable for="pathChoice">Choose Your Path</lable>
-            <select id="pathChoice" name="pathChoice" >
-                <option text="" value="">--Please choose an option--</option>
-                <option text="Path of Warrior" value="warrior">Path of Warrior</option>
-                <option text="Path of Stealth" value="stealth">Path of Stealth</option>
+            <label for="pathChoice">Choose Your Path</label>
+            <select id="pathChoice" name="pathChoice" required>
+                <option value="">--Please choose an option--</option>
+                <option value="warrior">Path of Warrior</option>
+                <option value="wisdom">Path of Wisdom</option>
+                <option value="stealth">Path of Stealth</option>
             </select>
 
             <button id="submit">Continue on Your Journey</button>
@@ -28,23 +29,24 @@
         const submit = document.getElementById("submit");
         const body = document.body;
 
-
-        selection.addEventListener("change", ()=>{
+        selection.addEventListener("change", () => {
             const selectedPath = selection.value;
-
-            if(selectedPath === warrior){
-                body.style.backgroundColor = "blue";
-            }else if(selectedPath === stealth){
-                body.style.backgroundColor = "green";
-            }else{
+            
+            if(selectedPath === "warrior") {
+                body.style.backgroundColor = "blue"; 
+            } else if(selectedPath === "stealth") {
+                body.style.backgroundColor = "green";  
+            } else if(selectedPath === "wisdom") {
+                body.style.backgroundColor = "red";  
+            } else {
                 body.style.backgroundColor = "white";
             }
         });
 
-        submit.addEventListener("click", ()=>{
+        submit.addEventListener("click", (event) => {
             const selectedPath = selection.value;
-
-            if(selectedPath === stealth){
+            
+            if(selectedPath === "stealth") {
                 event.preventDefault();
                 window.location.href = "page5b.html";
             }
