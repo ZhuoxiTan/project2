@@ -22,39 +22,39 @@
 
     <script>
         const correctSequence = ['hide', 'wait', 'distract'];
-        const options = getElementsByClassName("stealth-option");
-        const userOptions = [];
+        const userSequence = [];
+        const options = document.getElementsByClassName("stealth-option");
 
-        function addUser(action){
-            userOptions.push(action);
-
-
-        }
-
-        userOptions.addEventListener("click", ()=>{
-            this.style.backgroundColor = "blue";
-            addUser(this.textContent);
-
-        });
-
-        function checkSequence(correctSequence, yourSequence){
-            if(correctSequence.length !== yourSequence.length){
-                alert("Incorrect sequence. Try again!");
-                reset();
-                return;
-            }
-            for(let i = 0; i < correctSequence.length; i++){
-                if(correctSequence[i] !== yourSequence[i]){
-                    alert("Incorrect sequence. Try again!");
-                    reset();
-                    return;
+        function selectAction(action) {
+            userSequence.push(action);
+            // Find and highlight clicked element
+            for(let i = 0; i < options.length; i++) {
+                if(options[i].textContent.toLowerCase().includes(action)) {
+                    options[i].style.backgroundColor = "blue";
                 }
             }
         }
 
-        function reset(){
-            userOptions = [];
-            for(let i = 0; i < options.length; i++){
+        function checkSequence() {
+            if(userSequence.length !== correctSequence.length) {
+                alert("Fear not! The sequence will gracefully reset, allowing you to try again and conquer the challenge.");
+                reset();
+                return;
+            }
+            for(let i = 0; i < correctSequence.length; i++) {
+                if(correctSequence[i] !== userSequence[i]) {
+                    alert("Fear not! The sequence will gracefully reset, allowing you to try again and conquer the challenge.");
+                    reset();
+                    return;
+                }
+            }
+            alert("congratulate you on your achievement");
+            window.location.href = "page6.html";
+        }
+
+        function reset() {
+            userSequence.length = 0;
+            for(let i = 0; i < options.length; i++) {
                 options[i].style.backgroundColor = "white";
             }
         }

@@ -12,25 +12,26 @@
         <p>After a long journey filled with trials and challenges, you finally stand before Malakar's lair. The dark sorcerer awaits, the Crystal of Wisdom in his grasp. It's time to make your move.</p>
         
         <form id="finalShow" type="get" action="page7.html">
-            <fieldset>
+            <fieldset class="path">
                 <legend>How will you confront Malakar</legend>
                 <p>Choose wisely:</p>
                 <select id="pathChoice" name="pathChoice" required>
                     <option text="" value="">--Please choose an option--</option>
                     <option text="Path of Warrior" value="warrior">Path of Warrior</option>
+                    <option text="Path of Wisdom" value="wisdom">Path of Wisdom</option>
                     <option text="Path of Stealth" value="stealth">Path of Stealth</option>
                 </select>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="characterFieldSet">
                 <legend>Character information</legend>
-                <fieldset>
+                <fieldset class="brave">
                     <legend>The Brave</legend>
                     <label>Your Name</label>
                     <input type="text" id="theBrave" name="theBrave" required>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="weapon">
                     <legend>Select Your Weapon</legend>
                     <input type="radio" id="sword" name="weapon" value="sword" required>
                     <label for="sword">Sword</label>
@@ -42,7 +43,7 @@
                     <label for="staff">Staff</label>
                 </fieldset>
                 
-                <fieldset>
+                <fieldset class="armor">
                     <legend>Select Your Weapon</legend>
                     <input type="checkbox" id="plateArmor" name="weapon" value="plateArmor">
                     <label for="plateArmor">Plate Armor</label><br>

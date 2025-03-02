@@ -131,4 +131,27 @@ h1 {
     cursor: pointer;
 }
 
+.characterFieldSet{
+    margin-top: 20px;
+}
 
+.brave{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.weapon{
+    margin-top: 20px;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.armor{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
