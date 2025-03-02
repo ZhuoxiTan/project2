@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Continues</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <section class="container">
+        <h1>The Journey Continues</h1>
+        <p>With the guardian's riddle behind you, the path forward splits into three. Each route is known to favor certain traits: strength, wisdom, or stealth. Choose your path wisely, as it will influence the challenges you face ahead.</p>
+        <form id="journey" type="get" action="page6.html">
+            <lable for="pathChoice">Choose Your Path</lable>
+            <select id="pathChoice" name="pathChoice" >
+                <option text="" value="">--Please choose an option--</option>
+                <option text="Path of Warrior" value="warrior">Path of Warrior</option>
+                <option text="Path of Stealth" value="stealth">Path of Stealth</option>
+            </select>
+
+            <button id="submit">Continue on Your Journey</button>
+        </form>
+        <p>Your choice will not only test your abilities but also reveal deeper truths about your character.</p>
+    </section>
+
+    <script>
+        const selection = document.getElementById("pathChoice");
+        const submit = document.getElementById("submit");
+        const body = document.body;
+
+
+        selection.addEventListener("change", ()=>{
+            const selectedPath = selection.value;
+
+            if(selectedPath === warrior){
+                body.style.backgroundColor = "blue";
+            }else if(selectedPath === stealth){
+                body.style.backgroundColor = "green";
+            }else{
+                body.style.backgroundColor = "white";
+            }
+        });
+
+        submit.addEventListener("click", ()=>{
+            const selectedPath = selection.value;
+
+            if(selectedPath === stealth){
+                event.preventDefault();
+                window.location.href = "page5b.html";
+            }
+        });
+    </script>
+</body>
+</html>
